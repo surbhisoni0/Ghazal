@@ -13,7 +13,7 @@ Object.keys(M).forEach(k=>{const b=document.createElement('button');b.textConten
 document.getElementById('lang').onclick=()=>{L=L=='pt'?'en':'pt';try{localStorage.setItem('lang',L)}catch(e){}[...tabs.children].forEach(x=>x.textContent=t(x.dataset.k));tr()};
 const bg=document.getElementById('burger'),nv=document.getElementById('nv');
 bg.onclick=()=>{const o=nv.classList.toggle('open');bg.setAttribute('aria-expanded',o)};nv.onclick=e=>{if(e.target.tagName==='A'){nv.classList.remove('open');bg.setAttribute('aria-expanded',false)}};
-const tp=document.getElementById('top');addEventListener('scroll',()=>tp.style.display=scrollY>500?'block':'none');tp.onclick=()=>scrollTo({top:0,behavior:'smooth'});
+
 const f=document.getElementById('rf'),res=document.getElementById('res');f.date.min=new Date().toISOString().slice(0,10);
 f.onsubmit=async e=>{e.preventDefault();let ok=true;const set=(n,m)=>{f[n].parentNode.querySelector('.err').textContent=m||'';if(m)ok=false};
 const v=n=>f[n].value.trim();
