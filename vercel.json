@@ -1,0 +1,13 @@
+{
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "rewrites": [
+    { "source": "/gallery", "destination": "/gallery.html" },
+    { "source": "/api/:path*", "destination": "https://backendghazal.onrender.com/api/:path*" },
+    { "source": "/favicon.ico", "destination": "/img/favicon.ico" },
+    { "source": "/site.webmanifest", "destination": "/img/site.webmanifest" }
+  ],
+  "headers": [
+    { "source": "/video1.mp4", "headers": [ { "key": "Cache-Control", "value": "public, max-age=86400" }, { "key": "Accept-Ranges", "value": "bytes" } ] }
+  ]
+}
