@@ -3,9 +3,13 @@
   var v = document.querySelector('.vbg video'), b = document.getElementById('vpp');
   if (!v) return;
   v.muted = true;
+  // phones in portrait get the vertical clip, everything else the widescreen one
+  var tall = window.matchMedia && matchMedia('(max-aspect-ratio: 1/1)').matches;
+  v.poster = tall ? '/img/video1-poster-mobile.jpg' : '/img/video1-poster.jpg';
   var reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
   var save = navigator.connection && navigator.connection.saveData;
   var manual = false;
+  if (!save) v.src = tall ? '/video/hero-mobile.mp4' : '/video/hero.mp4';
   var T = { pt: { p: 'Pausar vídeo de fundo', a: 'Reproduzir vídeo de fundo' }, en: { p: 'Pause background video', a: 'Play background video' } };
   function label() {
     if (!b) return;
