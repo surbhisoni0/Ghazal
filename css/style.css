@@ -60,9 +60,8 @@ footer{background:var(--dark);color:#cdb893;text-align:center;padding:40px 0;fon
 html{background:#0e0805}
 body{background:transparent;position:relative}
 .vbg{position:fixed;inset:0;z-index:-1;overflow:hidden;background:#0e0805}
-.vbg video{position:absolute;inset:-3%;width:106%;height:106%;object-fit:cover;filter:saturate(1.08);transform:translateZ(0)}
-@media(min-width:900px){.vbg video{filter:blur(3px) saturate(1.08)}} /* source clip is portrait: soften it when stretched on wide screens */
-.vshade{position:absolute;inset:0;background:radial-gradient(ellipse at 50% 42%,rgba(14,8,5,.05),rgba(14,8,5,.5) 85%),linear-gradient(180deg,rgba(14,8,5,.4),rgba(14,8,5,.08) 40%,rgba(14,8,5,.55))}
+.vbg video{position:absolute;inset:-3%;width:106%;height:106%;object-fit:cover;filter:blur(1.5px) saturate(1.08);transform:translateZ(0)}
+.vshade{position:absolute;inset:0;background:radial-gradient(ellipse at 50% 48%,rgba(14,8,5,.62),rgba(14,8,5,.38) 55%,rgba(14,8,5,.6) 100%),linear-gradient(180deg,rgba(14,8,5,.5),rgba(14,8,5,.12) 35%,rgba(14,8,5,.6))}
 .vpp{position:fixed;z-index:15;right:16px;top:calc(72px + env(safe-area-inset-top,0px));width:38px;height:38px;border-radius:50%;background:rgba(14,8,5,.65);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);border:1px solid #d49a5c99;color:#d49a5c;cursor:pointer;font-size:12px;letter-spacing:-1px}
 .vpp:hover{background:rgba(14,8,5,.85)}.vpp:focus-visible{outline:2px solid #fff;outline-offset:2px}
 
@@ -71,7 +70,7 @@ header{background:rgba(14,8,5,.72);backdrop-filter:blur(12px);-webkit-backdrop-f
 .hero,.hero1{background:transparent;box-shadow:none;border:0}
 .hero1{min-height:calc(100svh - 60px);display:grid;place-items:center;padding:64px 0}
 .hero1 .hlogo{width:min(380px,76%);height:auto;border-radius:0;filter:drop-shadow(0 6px 26px rgba(0,0,0,.6))}
-.hero1 .wrap{position:relative}.hero1 .wrap:before{content:"";position:absolute;inset:-40px -10px;z-index:-1;background:radial-gradient(ellipse at center,rgba(14,8,5,.45),transparent 70%)}
+.hero1 .wrap{position:relative}.hero1 .wrap:before{content:"";position:absolute;inset:-40px -10px;z-index:-1;background:radial-gradient(ellipse at center,rgba(14,8,5,.5),transparent 72%)}
 .hero1 .k{text-shadow:0 2px 12px rgba(0,0,0,.8)}.hero1 h1{text-shadow:0 3px 22px rgba(0,0,0,.85)}
 section{background:rgba(14,8,5,.7);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
 .alt{background:rgba(33,21,14,.74)}
