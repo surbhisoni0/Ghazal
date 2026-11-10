@@ -18,4 +18,4 @@ document.getElementById('x').onclick=()=>dlg.close();document.getElementById('pv
 dlg.onclick=e=>{if(e.target===dlg)dlg.close()};dlg.onkeydown=e=>{if(e.key=='ArrowLeft')open_(i-1);if(e.key=='ArrowRight')open_(i+1)};
 document.getElementById('lang').onclick=()=>{L=L=='pt'?'en':'pt';try{localStorage.setItem('lang',L)}catch(e){}tr();if(dlg.open)open_(i)};
 const bg=document.getElementById('burger'),nv=document.getElementById('nv');bg.onclick=()=>{const o=nv.classList.toggle('open');bg.setAttribute('aria-expanded',o)};
-const tp=document.getElementById('top');addEventListener('scroll',()=>tp.style.display=scrollY>500?'block':'none');tp.onclick=()=>scrollTo({top:0,behavior:'smooth'});tr();
+tr();
